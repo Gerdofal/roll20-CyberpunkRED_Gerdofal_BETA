@@ -393,8 +393,8 @@ span {
 	border-image-source: url("http://gerdofal.net/roll20include/crredborder.jpg?ver5"); /* source url */
 	border-image-slice: 17 0 17 9;
 	border-image-width: 17px 0px 17px 9px;
-	border-image-outset: 0px; /* outset */
-	border-image-repeat: none;
+	border-image-outset: 0px;
+	border-image-repeat: stretch;
 }
 
 .sheet-borderblue {
