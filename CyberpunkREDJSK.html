@@ -746,21 +746,7 @@ on("clicked:clearmods", function() {
       =
       <input type="number" name="attr_remaininghits" value="@{startinghits}-@{dmg}" disabled="true" readonly>
     </div>
-    <div class="sectionbox widthpercent20 borderred">
-      <h3>Death</h3>
-      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Death Save}} {{roll=[[?{Roll Number?|1} - 1 + 1d10]]}}" name="roll_deathsave">Death Save</button>
-    </div>
-    <div class="sectionbox widthpercent20 borderred">
-      <h3>Reputation</h3>
-      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Reputation Check}} {{roll=[[1d10]]}} {{footer=Compare this result to your reputation of @{reputation}. If under, the people you have met have heard of you.}}" name="roll_reputation">Reputation Check</button>
-      <br>
-      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Facedown}} {{roll=[[@{cool} + @{reputation} + 1d10]]}}" name="roll_facedown">Facedown</button>
-    </div>
-    <div class="sectionbox widthpercent20 borderred">
-      <h3>Initiative</h3>
-      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Initiative}} {{roll=[[@{ref} + 1d10]]}}" name="roll_deathsave">Initiative</button>
-    </div>
-	<div class="sectionbox widthpercent30 bordergray">
+	<div class="sectionbox widthpercent20 borderred">
       <h3>Luck Spent</h3>
       <input type="radio" class="luck" name="attr_luckspent" value="0" checked="checked">
       <span></span>None <br>
@@ -790,33 +776,47 @@ on("clicked:clearmods", function() {
       =
       <input type="number" name="attr_remainingluck" value="@{luck}-@{luckspent}" disabled="true" readonly>
     </div>
+    <div class="sectionbox widthpercent50 borderred">
+      <h3>Reputation</h3>
+      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Reputation Check}} {{roll=[[1d10]]}} {{footer=Compare this result to your reputation of @{reputation}. If under, the people you have met have heard of you.}}" name="roll_reputation">Reputation Check</button>
+      <br>
+      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Facedown}} {{roll=[[@{cool} + @{reputation} + 1d10]]}} {{footer=If you win a facedown, the opponent must run or suffer a -3 to all actions if they stay.}}" name="roll_facedown">Facedown</button>
+    </div>
+    <div class="sectionbox widthpercent25 borderred">
+      <h3>Death</h3>
+      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Death Save}} {{roll=[[?{Roll Number?|1} - 1 + 1d10]]}}" name="roll_deathsave">Death Save</button>
+    </div>
+    <div class="sectionbox widthpercent25 borderred">
+      <h3>Initiative</h3>
+      <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Initiative}} {{roll=[[@{ref} + 1d10]]}}" name="roll_deathsave">Initiative</button>
+    </div>
     <div class="sectionbox widthpercent100 borderred">
       <h3>Attacks</h3>
-      <div class="sectionbox borderblue">
+      <div class="sectionbox borderblue widthpercent25">
         <h4><span name="attr_weapon1name"></span></h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=@{weapon1name}}} {{roll=[[@{weapon1skill} + @{finalmodifier} + 1d10]]}}" name="roll_weapon1">Attack</button>
         <button type="roll" value="@{charactername} does [[@{weapon1damage}d6]] damage with @{weapon1name}." name="roll_weapon1damage">Damage</button>
       </div>
-      <div class="sectionbox borderblue">
+      <div class="sectionbox borderblue widthpercent25">
         <h4><span name="attr_weapon2name"></span></h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=@{weapon2name}}} {{roll=[[@{weapon2skill} + @{finalmodifier} + 1d10]]}}" name="roll_weapon2">Attack</button>
         <button type="roll" value="@{charactername} does [[@{weapon2damage}d6]] damage with @{weapon2name}." name="roll_weapon2damage">Damage</button>
       </div>
-      <div class="sectionbox borderblue">
+      <div class="sectionbox borderblue widthpercent25">
         <h4><span name="attr_weapon3name"></span></h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=@{weapon3name}}} {{roll=[[@{weapon3skill} + @{finalmodifier} + 1d10]]}}" name="roll_weapon3">Attack</button>
         <button type="roll" value="@{charactername} does [[@{weapon3damage}d6]] damage with @{weapon3name}." name="roll_weapon3damage">Damage</button>
       </div>
-      <div class="sectionbox borderblue">
+      <div class="sectionbox borderblue widthpercent25">
         <h4><span name="attr_weapon4name"></span></h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=@{weapon4name}}} {{roll=[[@{weapon4skill} + @{finalmodifier} + 1d10]]}}" name="roll_weapon4">Attack</button>
         <button type="roll" value="@{charactername} does [[@{weapon4damage}d6]] damage with @{weapon4name}." name="roll_weapon4damage">Damage</button>
-      </div>
-      <div class="sectionbox borderblue">
+      </div> <br>
+      <div class="sectionbox borderblue widthpercent25">
         <h4>Brawling</h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Brawling}} {{roll=[[@{dex} + @{brawlingroll} + @{finalmodifier} + 1d10]]}}" name="roll_brawling">Brawling</button>
       </div>
-      <div class="sectionbox borderblue">
+      <div class="sectionbox borderblue widthpercent25">
         <h4>Suppressive Fire</h4>
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Suppressive Fire}} {{roll=[[@{ref} + @{marksmanshiproll} + @{finalmodifier} + 1d10]]}}" name="roll_suppressivefire">Suppressive Fire</button>
       </div>
@@ -984,7 +984,7 @@ on("clicked:clearmods", function() {
     <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Skillname}} {{roll=[[@{dex} + @{brawlingroll} + @{finalmodifier} + 1d10]]}} {{footer=This is how footer text will look, if there is any such text on the action being taken.}}">Test Roll</button>
     <br>
     <hr>
-    <input type="checkbox" id="gmbutton" class="sheet-gm-checkbox" name="attr_gmhidecheckbox"><label for="gmbutton">Click here to access GM tools. This will hide the player section.</label>
+    <input type="checkbox" id="gmbutton" class="sheet-gm-checkbox" name="attr_gmhidecheckbox">Click here to access GM tools. This will hide the player section.
   </div>
 </div>
 <div class="sheet-hidable-gmonlyview">
@@ -1125,10 +1125,10 @@ on("clicked:clearmods", function() {
 			</select>
         </div>
         <div class="sectionbox widthpercent10 bordergray">
-          <button type="roll" name="roll_repeating_npc_dmg1" value="&{template:jskgm1}{{charactername=@{repeating_npc_name}}} {{header=@{repeating_npc_dmg1} damage: }} {{roll=[[@{repeating_npc_dmg1_roll}d6]]}}"> <span name="attr_repeating_npc_dmg1"></span> </button>
+		  <button type="roll" name="roll_repeating_npc_dmg1" value="@{repeating_npc_name} does [[@{repeating_npc_dmg1_roll}d6]] damage with @{repeating_npc_dmg1}."><span name="attr_repeating_npc_dmg1"></span></button>
         </div>
         <div class="sectionbox widthpercent10 bordergray">
-          <button type="roll" name="roll_repeating_npc_dmg2" value="&{template:jskgm1}{{charactername=@{repeating_npc_name}}} {{header=@{repeating_npc_dmg2} damage: }} {{roll=[[@{repeating_npc_dmg2_roll}d6]]}}"> <span name="attr_repeating_npc_dmg2"></span> </button>
+		  <button type="roll" name="roll_repeating_npc_dmg2" value="@{repeating_npc_name} does [[@{repeating_npc_dmg2_roll}d6]] damage with @{repeating_npc_dmg2}."><span name="attr_repeating_npc_dmg2"></span></button>
         </div>
       </div>
       <input type="checkbox" name="attr_repeating_editmodecheckbox" class="sheet-hidden-repeating-checkbox">
@@ -1193,7 +1193,7 @@ on("clicked:clearmods", function() {
 <hr>
   <button type="roll" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Skillname}} {{roll=[[@{dex} + @{brawlingroll} + @{finalmodifier} + 1d10]]}} {{footer=This is how footer text will look, if there is any such text on the action being taken.}}">Test Roll</button>
 	<hr>
-  <input type="checkbox" id="gmbutton2" class="sheet-gm-checkbox" name="attr_gmhidecheckbox"><label for="gmbutton2">Click here to hide GM tools and show the player section.</label>
+  <input type="checkbox" id="gmbutton2" class="sheet-gm-checkbox" name="attr_gmhidecheckbox">Click here to hide GM tools and show the player section.
 </div>
 
 <rolltemplate class="sheet-rolltemplate-jsk1">
