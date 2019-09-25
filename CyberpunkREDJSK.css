@@ -243,6 +243,45 @@ input[type="radio"]:checked.sheet-dmg ~ input[type="radio"].sheet-dmg + span::be
     content: "";
 }
 
+
+/* Radio Buttons for Tracking Luck */
+/* Hide actual radio */
+input[type="radio"].sheet-luck {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake radio */
+input[type="radio"].sheet-luck + span::before {
+    margin-right: 4px;
+    border: solid 1px #00a800;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 2px #ccc;
+    background: #f6f6f6;
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+    content: "•";
+	color: #00f600;
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+/* Remove dot from all radios _after_ selected one */
+input[type="radio"]:checked.sheet-luck ~ input[type="radio"].sheet-luck + span::before {    
+    content: "";
+}
+
 /* Changes the button icon to a d10 */
 
 button[type="roll"]::before {

@@ -207,20 +207,20 @@ on("clicked:clearmods", function() {
   <input type="radio" name="selecttab" class="tab tab6" value="6">
   <span class="tab">Settings</span>
   <div class="tab-content tab1">
-    <div class="sectionbox bordergray widthpercent100">
+    <div class="sectionbox borderred widthpercent100">
       <div class="sectionbox widthpercent100">
-        <div class="sectionbox widthpercent33 borderred">Character Name<br>
+        <div class="sectionbox widthpercent33">Character Name<br>
           <input type="text" name="attr_charactername">
         </div>
-        <div class="sectionbox widthpercent33 borderred">Character Role<br>
+        <div class="sectionbox widthpercent33">Character Role<br>
           <input type="text" name="attr_characterrole">
         </div>
-        <div class="sectionbox widthpercent33 borderblue">Player Name<br>
+        <div class="sectionbox widthpercent33">Player Name<br>
           <input type="text" name="attr_playername">
         </div>
       </div>
     </div>
-    <div class="sectionbox bordergray widthpercent100">
+    <div class="sectionbox borderred widthpercent100">
       <h3>Attributes</h3>
       <div class="sectionbox widthpercent100">
         <div class="sectionbox widthpercent10"> INT<br>
@@ -255,7 +255,7 @@ on("clicked:clearmods", function() {
         </div>
       </div>
     </div>
-    <div class="sectionbox bordergray widthpercent100">
+    <div class="sectionbox borderred widthpercent100">
       <div class="sectionbox widthpercent33"> Starting Hits
         <input type="number" name="attr_startinghits" readonly>
       </div>
@@ -266,7 +266,7 @@ on("clicked:clearmods", function() {
         <input type="number" name="attr_deathsave" readonly>
       </div>
     </div>
-    <div class="sectionbox bordergray widthpercent50">
+    <div class="sectionbox borderred widthpercent50">
       <h3>Skills</h3>
       <div class="sectionbox widthpercent50">
         <h4>Fighting Skills</h4>
@@ -521,7 +521,7 @@ on("clicked:clearmods", function() {
         <input type="number" name="attr_reputation" value="0">
       </div>
     </div>
-    <div class="sectionbox bordergray widthpercent50">
+    <div class="sectionbox borderred widthpercent50">
       <div class="sectionbox borderbottom widthpercent100">
         <h3>Weapons</h3>
         Name 1
@@ -577,7 +577,7 @@ on("clicked:clearmods", function() {
         </select>
       </div>
     </div>
-	<div class="sectionbox bordergray widthpercent50">
+	<div class="sectionbox borderred widthpercent50">
       <h3>Armor</h3>
       Armor Type
       <input type="text" name="attr_armortype" value="Armor Type">
@@ -590,7 +590,7 @@ on("clicked:clearmods", function() {
     
   </div>
   <div class="tab-content tab2">
-    <div class="sectionbox bordergreen widthpercent50">
+    <div class="sectionbox borderred widthpercent50">
       <h3>Damage Level</h3>
       <div class="sectionbox widthpercent50">
         <input class="wordlist" type="checkbox" id="attr_damageserious" name="attr_damageserious" value="-3">
@@ -636,7 +636,7 @@ on("clicked:clearmods", function() {
         <button type="action" name="act_clearmods">Clear</button>
       </div>
     </div>
-    <div class="sectionbox widthpercent30 bordergray">
+    <div class="sectionbox widthpercent30 borderred">
       <h3>Damage Taken</h3>
       <input type="radio" class="dmg" name="attr_dmg" value="0" checked="checked">
       <span></span>Undamaged <br>
@@ -746,19 +746,49 @@ on("clicked:clearmods", function() {
       =
       <input type="number" name="attr_remaininghits" value="@{startinghits}-@{dmg}" disabled="true" readonly>
     </div>
-    <div class="sectionbox widthpercent20 bordergray">
+    <div class="sectionbox widthpercent20 borderred">
       <h3>Death</h3>
       <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Death Save}} {{roll=[[?{Roll Number?|1} - 1 + 1d10]]}}" name="roll_deathsave">Death Save</button>
     </div>
-    <div class="sectionbox widthpercent50 bordergray">
+    <div class="sectionbox widthpercent20 borderred">
       <h3>Reputation</h3>
       <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Reputation Check}} {{roll=[[1d10]]}} {{footer=Compare this result to your reputation of @{reputation}. If under, the people you have met have heard of you.}}" name="roll_reputation">Reputation Check</button>
       <br>
       <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Facedown}} {{roll=[[@{cool} + @{reputation} + 1d10]]}}" name="roll_facedown">Facedown</button>
     </div>
-    <div class="sectionbox widthpercent50 bordergray">
+    <div class="sectionbox widthpercent20 borderred">
       <h3>Initiative</h3>
       <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Initiative}} {{roll=[[@{ref} + 1d10]]}}" name="roll_deathsave">Initiative</button>
+    </div>
+	<div class="sectionbox widthpercent30 bordergray">
+      <h3>Luck Spent</h3>
+      <input type="radio" class="luck" name="attr_luckspent" value="0" checked="checked">
+      <span></span>None <br>
+      <input type="radio" class="luck" name="attr_luckspent" value="1">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="2">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="3">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="4">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="5">
+      <span></span> <br>
+      <input type="radio" class="luck" name="attr_luckspent" value="6">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="7">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="8">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="9">
+      <span></span>
+      <input type="radio" class="luck" name="attr_luckspent" value="10">
+      <span></span> <br>
+      <input type="number" name="attr_luck" readonly>
+      -
+      <input type="number" name="attr_luckspent" readonly>
+      =
+      <input type="number" name="attr_remainingluck" value="@{luck}-@{luckspent}" disabled="true" readonly>
     </div>
     <div class="sectionbox widthpercent100 borderred">
       <h3>Attacks</h3>
@@ -791,7 +821,7 @@ on("clicked:clearmods", function() {
         <button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Suppressive Fire}} {{roll=[[@{ref} + @{marksmanshiproll} + @{finalmodifier} + 1d10]]}}" name="roll_suppressivefire">Suppressive Fire</button>
       </div>
     </div>
-    <div class="sectionbox borderblue widthpercent100">
+    <div class="sectionbox borderred widthpercent100">
       <h3>Skill Rolls</h3>
       <div class="sectionbox widthpercent100">
         <div class="sectionbox widthpercent50">
