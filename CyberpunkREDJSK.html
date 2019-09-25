@@ -1016,12 +1016,13 @@ on("clicked:clearmods", function() {
 	<div class="npc-holder">
     <div class="sectionbox widthpercent100">
       <div class="sectionbox widthpercent10 borderblack">Edit</div>
-      <div class="sectionbox widthpercent15 borderblack">Name</div>
+      <div class="sectionbox widthpercent10 borderblack">Name</div>
+      <div class="sectionbox widthpercent10 borderblack">Initiative</div>
       <div class="sectionbox widthpercent10 borderblack">Skill</div>
       <div class="sectionbox widthpercent10 borderblack">Skill</div>
       <div class="sectionbox widthpercent10 borderblack">Skill</div>
       <div class="sectionbox widthpercent10 borderblack">Skill</div>
-      <div class="sectionbox widthpercent10 borderblack">Skill</div>
+      <div class="sectionbox widthpercent10 borderblack">Penalty</div>
       <div class="sectionbox widthpercent10 borderblack">DMG1</div>
       <div class="sectionbox widthpercent10 borderblack">DMG2</div>
     </div>
@@ -1030,9 +1031,12 @@ on("clicked:clearmods", function() {
         <div class="sectionbox widthpercent10 bordergray">
           <input class="npc-hidable" type="checkbox" name="attr_repeating_editmodecheckbox">
         </div>
-        <div class="sectionbox widthpercent15 bordergray">
+        <div class="sectionbox widthpercent10 bordergray">
           <input class="npc-hidable" type="text" name="attr_repeating_npc_name">
         </div>
+        <div class="sectionbox widthpercent10 bordergray">
+  		  <button type="roll" name="roll_repeating_npc_skill1" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{charactername=@{repeating_npc_name}}} {{header=NPC Initiative}} {{roll=[[@{repeating_npc_initiative_roll} + @{repeating_npc_penalty} + 1d10]]}}"> <span name="attr_repeating_npc_skill1"></span> </button>
+		</div>
         <div class="sectionbox widthpercent10 bordergray">
           <button type="roll" name="roll_repeating_npc_skill1" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{charactername=@{repeating_npc_name}}} {{header=@{repeating_npc_skill1}}} {{roll=[[@{repeating_npc_skill1_roll} + @{repeating_npc_penalty} + 1d10]]}}"> <span name="attr_repeating_npc_skill1"></span> </button>
         </div>
@@ -1099,7 +1103,10 @@ on("clicked:clearmods", function() {
       </div>
       <input type="checkbox" name="attr_repeating_editmodecheckbox" class="sheet-hidden-repeating-checkbox">
       <div class="sectionbox widthpercent100 sheet-repeating-hidable">
-        <div class="sectionbox widthpercent25 borderblue"> LABELS </div>
+        <div class="sectionbox widthpercent20 borderblue"> LABELS </div>
+        <div class="sectionbox widthpercent10 borderblue">
+          REF
+        </div>
         <div class="sectionbox widthpercent10 borderblue">
           <input class="npc-hidable" type="text" name="attr_repeating_npc_skill1">
         </div>
@@ -1124,7 +1131,10 @@ on("clicked:clearmods", function() {
       </div>
       <input type="checkbox" name="attr_repeating_editmodecheckbox" class="sheet-hidden-repeating-checkbox">
       <div class="sectionbox widthpercent100 sheet-repeating-hidable">
-        <div class="sectionbox widthpercent25 bordergreen"> VALUES </div>
+        <div class="sectionbox widthpercent20 bordergreen"> VALUES </div>
+        <div class="sectionbox widthpercent10 bordergreen">
+          <input class="npc-hidable" type="text" name="attr_repeating_npc_initiative_roll">
+        </div>
         <div class="sectionbox widthpercent10 bordergreen">
           <input class="npc-hidable" type="text" name="attr_repeating_npc_skill1_roll">
         </div>
