@@ -1,0 +1,9 @@
+// JSON Document
+{
+	"html": "CyberpunkREDJSK.html",
+	"css": "CyberpunkREDJSK.css",
+	"authors": "Gerdofal",
+	"roll20userid": "380243",
+	"preview": "kitchensink.png",
+	"instructions": "**Gerdofal's Cyberpunk RED Character Sheet**\n\n- Full support for all actions and attributes in the Cyberpunk RED Jumpstart kit. (Will be adding more when the official rulebook comes out.)\n\n- Please send issues or requests to: [Beta Version Github Repository](https://github.com/Gerdofal/roll20-cyberpunkredjumpstart/issues)"
+}
