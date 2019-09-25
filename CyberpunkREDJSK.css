@@ -398,15 +398,15 @@ span {
 }
 
 .sheet-borderblue {
-		border: 3px ridge #1010FF;
+		border: 1px ridge #1010FF;
 }
 
 .sheet-borderblack {
-		border: 3px ridge #101010;
+		border: 1px ridge #101010;
 }
 
 .sheet-bordergray {
-		border: 3px ridge #757575;
+		border: 1px ridge #757575;
 }
 
 .sheet-borderbottom {
@@ -414,11 +414,11 @@ span {
 }
 
 .sheet-borderleft {
-		border-left: 3px ridge #757575;
+		border-left: 1px ridge #757575;
 }
 
 .sheet-bordergreen {
-		border: 3px ridge #10FF10;
+		border: 1px ridge #10FF10;
 }
 
 .sheet-bordernone {
