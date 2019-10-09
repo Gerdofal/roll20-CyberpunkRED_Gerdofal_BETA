@@ -867,17 +867,22 @@ on("clicked:clearmods", function() {
 		<div class="role-netrunner">
 			<h3>Netrunner Actions</h3>
 
+			<div class="sectionbox widthpercent100 borderblue">
+			<h4>Program Modifiers</h4>
+			<div class="sectionbox widthpercent50">
 			Current Speed: <select name="attr_netrunnerspd">
 			  <option value="0" SELECTED>Default - +0</option>
 			  <option value="4">Speedy Gonzalvez - +4</option>
 			</select> <br>
-			
+			</div>
+			<div class="sectionbox widthpercent50">
 			Program Attack: <select name="attr_netrunnerprogramattack">
 			  <option value="0" SELECTED>Default - +0</option>
 			  <option value="2">Banhammer - +2</option>
 			</select> <br>
-
-	
+				</div>
+			</div>
+			
 			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Scanner}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=Scanner uses a MEAT ACTION to find systems in the area. The higher the check, the more and further away are the spotted systems (at GM discretion).}}" name="roll_scanner">Scanner</button>
 
 			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Back Door}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=A NET action to break through the password for a system. Check result must exceed the DV of the password. Roll not needed if the password is already known.}}" name="roll_backdoor">Back Door</button>
