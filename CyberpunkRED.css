@@ -92,6 +92,25 @@ Updated 9/25/2918 6:24 AM
 	box-sizing: border-box;	
 }
 
+/* Setup for roll section hide and show */
+sheet-hidden-checkbox {
+	display: none;
+}
+
+div.sheet-role-netrunner {
+	display: none;
+}
+
+.sheet-role-netrunner-checkbox:checked ~ div.sheet-role-netrunner {
+    display: block;
+	box-sizing: border-box;	
+}
+
+.sheet-role-netrunner-checkbox:not(:checked) ~ div.sheet-role-netrunner {
+    display: none;
+	box-sizing: border-box;	
+}
+
 
 /* Repeating hidable edit boxes for NPC section of the sheet*/
 

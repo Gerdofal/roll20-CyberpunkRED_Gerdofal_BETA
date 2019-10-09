@@ -1,5 +1,5 @@
 <!--
-Updated 9/25/2918 6:24 AM
+Updated 10/8/2019
 -->
 
 
@@ -862,6 +862,14 @@ on("clicked:clearmods", function() {
         </div>
       </div>
     </div>
+	<div class="sectionbox widthpercent100 borderred">
+	  <input type="checkbox" class="sheet-role-netrunner hidden-checkbox" name="attr_shownetrunner" disabled>Netrunner
+		<div class="role-netrunner">
+			Netrunner
+		</div>
+	  
+	  
+	</div>
   </div>
   <div class="tab-content tab3">
     <div class="sectionbox widthpercent100">
@@ -985,6 +993,12 @@ on("clicked:clearmods", function() {
     <br>
     <hr>
     <input type="checkbox" id="gmbutton" class="sheet-gm-checkbox" name="attr_gmhidecheckbox">Click here to access GM tools. This will hide the player section.
+	<hr>
+	<hr>
+	Role sections
+	<br>
+	<input type="checkbox" class="sheet-role-netrunner" name="attr_shownetrunner">Netrunner
+	  
   </div>
 </div>
 <div class="sheet-hidable-gmonlyview">
@@ -1065,7 +1079,7 @@ on("clicked:clearmods", function() {
           <input class="npc-hidable" type="text" name="attr_repeating_npc_name">
         </div>
         <div class="sectionbox widthpercent10 bordergray">
-  		  <button type="roll" name="roll_repeating_npc_skill1" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{charactername=@{repeating_npc_name}}} {{header=NPC Initiative}} {{roll=[[@{repeating_npc_initiative_roll} + @{repeating_npc_penalty} + 1d10]]}}"> <span name="attr_repeating_npc_skill1"></span> </button>
+  		  <button type="roll" name="roll_repeating_npc_skill1" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{charactername=@{repeating_npc_name}}} {{header=NPC Initiative}} {{roll=[[@{repeating_npc_initiative_roll} + @{repeating_npc_penalty} + 1d10]]}}"> <span name="initiative"></span> </button>
 		</div>
         <div class="sectionbox widthpercent10 bordergray">
           <button type="roll" name="roll_repeating_npc_skill1" value="&{template:jskgm1}{{critroll=[[1d10]]}}{{charactername=@{repeating_npc_name}}} {{header=@{repeating_npc_skill1}}} {{roll=[[@{repeating_npc_skill1_roll} + @{repeating_npc_penalty} + 1d10]]}}"> <span name="attr_repeating_npc_skill1"></span> </button>
