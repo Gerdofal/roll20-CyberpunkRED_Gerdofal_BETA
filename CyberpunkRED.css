@@ -93,7 +93,7 @@ Updated 9/25/2918 6:24 AM
 }
 
 /* Setup for roll section hide and show */
-sheet-hidden-checkbox {
+.sheet-hidden-checkbox {
 	display: none;
 }
 

@@ -863,9 +863,44 @@ on("clicked:clearmods", function() {
       </div>
     </div>
 	<div class="sectionbox widthpercent100 borderred">
-	  <input type="checkbox" class="sheet-role-netrunner hidden-checkbox" name="attr_shownetrunner" disabled>Netrunner
+	  <input type="checkbox" class="role-netrunner-checkbox hidden-checkbox" name="attr_shownetrunner">
 		<div class="role-netrunner">
-			Netrunner
+			<h3>Netrunner Actions</h3>
+
+			Current Speed: <select name="attr_netrunnerspd">
+			  <option value="0" SELECTED>Default - +0</option>
+			  <option value="4">Speedy Gonzalvez - +4</option>
+			</select> <br>
+			
+			Program Attack: <select name="attr_netrunnerprogramattack">
+			  <option value="0" SELECTED>Default - +0</option>
+			  <option value="2">Banhammer - +2</option>
+			</select> <br>
+
+	
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Scanner}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=Scanner uses a MEAT ACTION to find systems in the area. The higher the check, the more and further away are the spotted systems (at GM discretion).}}" name="roll_scanner">Scanner</button>
+
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Back Door}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=A NET action to break through the password for a system. Check result must exceed the DV of the password. Roll not needed if the password is already known.}}" name="roll_backdoor">Back Door</button>
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Pathfinder}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=Use a NET action to map out a system. The higher the check, the more is learned. Tells you about the system you broke into, but doesn't give the DV of anything. Deeper floors are harder to map. Information obtained is at GM discretion.}}" name="roll_pathfinder">Pathfinder</button>
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Slide}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=Slide is used to escape a Black ICE program. A successful Slide vs the ICE Perception + 1d10 allows escape to an adjacent floor, so long as there isn't a password or other net obstruction on the floors. May only be attempted once per turn. and may not be attempted preemptively.}}" name="roll_slide">Slide</button>			
+
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Zap}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=A NET attack against a program or netrunner. DV is the programs Defense Value + 1d10 or the Netrunners Interface + 1d10. A successful attack does 1d6 damage to the programs REZ or directly to the netrunner brain.}}" name="roll_zap">Zap</button>			
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Eye-Dee}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=Attempts to identify a found piece of data and its value as a NET action. Roll is against the DV of the item, which is set by the GM.}}" name="roll_eyedee">Eye-Dee</button>			
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Control}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=An attempt to control meat devices as a NET action. The DV that must be exceeded is based on the DV of the control node. Once control is taken, orders are given to the meat devices through use of NET actions. Another netrunner may try to take back control by exceeding a DV equal to the original control check.}}" name="roll_control">Control</button>			
+
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Virus}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=A NET action that is only usable on the last level of the elevator. A stronger virus requires a higher DV. Writing a virus faster also increases the DV. This action may take as many NET actions as the GM determines. The DV to destroy the virus is equal to the check.}}" name="roll_virus">Virus</button>	
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Cloak}} {{roll=[[@{interface} + @{finalmodifier} + 1d10]]}} {{footer=A NET action to hide the netrunner, and any virus, in the system. The result of the check becomes the DV for another netrunner to use Pathfinder to break the cloak.}}" name="roll_cloak">Cloak</button>	
+
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Initial Black Ice Encounter}} {{roll=[[@{netrunnerspd} + @{interface} + @{finalmodifier} + 1d10]]}} {{footer=On the initial encounter with black ice, when the ICE automatically attacks the netrunner upon reaching a level, SPD is added to the roll made by the netrunner. Future attacks by the netrunner use Zap or Program Attack.}}" name="roll_initialblackice">Initial Black ICE Encounter</button>	
+			
+			<button type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Program Attack}} {{roll=[[@{netrunnerprogramattack} + @{interface} + @{finalmodifier} + 1d10]]}} {{footer=This attack uses the additional ATT given by a program. Other than that, it is the same as Zap. Some programs also increase the damage done on a successful attack, or limit valid targets (ex. Programs Only).}}" name="roll_programattack">Program Attack</button>	
+			
+
 		</div>
 	  
 	  
@@ -997,7 +1032,9 @@ on("clicked:clearmods", function() {
 	<hr>
 	Role sections
 	<br>
-	<input type="checkbox" class="sheet-role-netrunner" name="attr_shownetrunner">Netrunner
+	  (Click the checkbox below to activate special role sections. Currently, only Netrunner is available.)
+	<br>
+	<input type="checkbox" class="role-netrunner-checkbox" name="attr_shownetrunner">Netrunner
 	  
   </div>
 </div>
