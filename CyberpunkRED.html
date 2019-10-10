@@ -308,7 +308,7 @@ on("clicked:clearmods", function() {
         <h4>Ranged Weapon Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Marksmanship </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Marksmanship}} {{roll=[[@{ref} + @{marksmanshiproll} + @{finalmodifier} + 1d10]]}}">Marksmanship</button>
           <div class="skillvalue">
             <input type="number" name="attr_marksmanship" value="0">
           </div>
@@ -319,7 +319,7 @@ on("clicked:clearmods", function() {
         <h4>Awareness Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Concentration </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Concentration}} {{roll=[[@{will} + @{concentrationroll} + @{finalmodifier} + 1d10]]}}">Concentration</button>
           <div class="skillvalue">
             <input type="number" name="attr_concentration" value="0">
           </div>
@@ -330,7 +330,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Perception </div>
+           <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Perception}} {{roll=[[@{will} + @{perceptionroll} + @{finalmodifier} + 1d10]]}}">Perception</button>
           <div class="skillvalue">
             <input type="number" name="attr_perception" value="0">
           </div>
@@ -341,7 +341,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Tracking </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Tracking}} {{roll=[[@{will} + @{trackingroll} + @{finalmodifier} + 1d10]]}}">Tracking</button>
           <div class="skillvalue">
             <input type="number" name="attr_tracking" value="0">
           </div>
@@ -352,7 +352,7 @@ on("clicked:clearmods", function() {
         <h4>Control Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Driving </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Driving}} {{roll=[[@{ref} + @{drivingroll} + @{finalmodifier} + 1d10]]}}">Driving</button>
           <div class="skillvalue">
             <input type="number" name="attr_driving" value="0">
           </div>
@@ -363,7 +363,7 @@ on("clicked:clearmods", function() {
         <h4>Body Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Athletics </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Athletics}} {{roll=[[@{dex} + @{athleticsroll} + @{finalmodifier} + 1d10]]}}">Athletics</button>
           <div class="skillvalue">
             <input type="number" name="attr_athletics" value="0">
           </div>
@@ -374,7 +374,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Stealth </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Stealth}} {{roll=[[@{dex} + @{stealthroll} + @{finalmodifier} + 1d10]]}}">Stealth</button>
           <div class="skillvalue">
             <input type="number" name="attr_stealth" value="0">
           </div>
@@ -385,7 +385,7 @@ on("clicked:clearmods", function() {
         <h4>Netrunning Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Interface </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Interface}} {{roll=[[@{interfaceroll} + @{finalmodifier} + 1d10]]}}">Interface</button>
           <div class="skillvalue">
             <input type="number" name="attr_interface" value="0">
           </div>
@@ -398,7 +398,7 @@ on("clicked:clearmods", function() {
         <h4>Social Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Bribery </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Bribery}} {{roll=[[@{cool} + @{briberyroll} + @{finalmodifier} + 1d10]]}}">Bribery</button>
           <div class="skillvalue">
             <input type="number" name="attr_bribery" value="0">
           </div>
@@ -409,7 +409,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Conversation </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Conversation}} {{roll=[[@{emp} + @{conversationroll} + @{finalmodifier} + 1d10]]}}">Conversation</button>
           <div class="skillvalue">
             <input type="number" name="attr_conversation" value="0">
           </div>
@@ -420,7 +420,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Human Perception </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Human Perception}} {{roll=[[@{emp} + @{humanperceptionroll} + @{finalmodifier} + 1d10]]}}">Human Perception</button>
           <div class="skillvalue">
             <input type="number" name="attr_humanperception" value="0">
           </div>
@@ -431,7 +431,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Interrogation </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Interrogation}} {{roll=[[@{cool} + @{interrogationroll} + @{finalmodifier} + 1d10]]}}">Interrogation</button>
           <div class="skillvalue">
             <input type="number" name="attr_interrogation" value="0">
           </div>
@@ -442,7 +442,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Persuasion </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Persuasion}} {{roll=[[@{cool} + @{persuasionroll} + @{finalmodifier} + 1d10]]}}">Persuasion</button>
           <div class="skillvalue">
             <input type="number" name="attr_persuasion" value="0">
           </div>
@@ -453,7 +453,7 @@ on("clicked:clearmods", function() {
         <h4>Technique Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Basic Tech </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Basic Tech}} {{roll=[[@{tech} + @{basictechroll} + @{finalmodifier} + 1d10]]}}">Basic Tech</button>
           <div class="skillvalue">
             <input type="number" name="attr_basictech" value="0">
           </div>
@@ -464,7 +464,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Cybertech </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Cybertech}} {{roll=[[@{tech} + @{cybertechroll} + @{finalmodifier} + 1d10]]}}">Cybertech</button>
           <div class="skillvalue">
             <input type="number" name="attr_cybertech" value="0">
           </div>
@@ -475,7 +475,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> First Aid </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=First Aid}} {{roll=[[@{tech} + @{firstaidroll} + @{finalmodifier} + 1d10]]}}">First Aid</button>
           <div class="skillvalue">
             <input type="number" name="attr_firstaid" value="0">
           </div>
@@ -486,7 +486,7 @@ on("clicked:clearmods", function() {
         <h4>Performance Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Play Instrument </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Play Instrument}} {{roll=[[@{emp} + @{playinstrumentroll} + @{finalmodifier} + 1d10]]}}">Play Instrument</button>
           <div class="skillvalue">
             <input type="number" name="attr_playinstrument" value="0">
           </div>
@@ -497,7 +497,7 @@ on("clicked:clearmods", function() {
         <h4>Education Skills</h4>
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Education </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Education}} {{roll=[[@{int} + @{education} + @{finalmodifier} + 1d10]]}}">Education</button>
           <div class="skillvalue">
             <input type="number" name="attr_education" value="0">
           </div>
@@ -508,7 +508,7 @@ on("clicked:clearmods", function() {
         
         <!-- BEGIN SKILL ROW -->
         <div class="sectionbox widthpercent100">
-          <div class="skillname"> Local Expert </div>
+          <button class="invisible-button" type="roll" value="&{template:jsk1}{{critroll=[[1d10]]}}{{templatecolor=@{templatecolor}}} {{charactername=@{charactername}}} {{header=Local Expert}} {{roll=[[@{int} + @{localexpertroll} + @{finalmodifier} + 1d10]]}}">Local Expert</button>
           <div class="skillvalue">
             <input type="number" name="attr_localexpert" value="0">
           </div>
