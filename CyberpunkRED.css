@@ -328,7 +328,7 @@ button[type="roll"].sheet-invisible-button::before {
 
 button[type="roll"].sheet-invisible-button:hover {
 	color: red;
-	font-weight: bold;
+	font-weight: normal;
 	background-color: transparent;
     border-top: none;
     border-left: none;
